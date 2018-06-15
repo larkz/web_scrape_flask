@@ -17,7 +17,7 @@ def webscrape():
     if web_scrape_form.validate_on_submit():
         # flash('Web scraping for URL {}'.format(web_scrape_form.website_url.data))
         print('Clicked scrape button!', file=sys.stdout)
-        data = models.User(username="234", email="gg", password_hash="66")
+        data = models.User(username=web_scrape_form.website_url.data, email="gg", password_hash="66")
         
         db.session.add(data)
         db.session.commit()
