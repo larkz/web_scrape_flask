@@ -1,0 +1,11 @@
+{% block content %}
+<h1>Scrape Text From Site</h1>
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.website_url.label }}<br>
+        {{ form.website_url(size=32) }}
+    </p>
+    <p>{{ form.submit() }}</p>
+</form>
+{% endblock %}
